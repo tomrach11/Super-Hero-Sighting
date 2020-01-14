@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a894888-a84b-4d4e-a6f1-189c257569ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InteliJ.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/DogGenetics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/HealthyHearts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/RockPaperScissors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/SummativeSums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/exercises/Factorizor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/exercises/InterestCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/exercises/LuckySeven.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/CoinFlipper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/FieldDay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/ForByFor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/ForTimesFor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/GuessMeFinally.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/GuessMeMore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/LazyTeenager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/MaybeItLoveMe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/StayPositive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/TheCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/TraditionalFizzBuzz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/TriviaNight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/YourLifeInMovies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NetBeans/SoftwareGuild/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../download.jpeg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1WLqaLEQO7dko6cpM0syKsLa1U5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+  </component>
+  <component name="RunManager" selected="Application.TraditionalFizzBuzz">
+    <configuration name="ForByFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.ForByFor" />
+      <module name="InteliJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsg.m1.lessons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForTimesFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.ForTimesFor" />
+      <module name="InteliJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsg.m1.lessons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuessMeFinally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.GuessMeFinally" />
+      <module name="InteliJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsg.m1.lessons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.TheCount" />
+      <module name="InteliJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsg.m1.lessons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TraditionalFizzBuzz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.TraditionalFizzBuzz" />
+      <module name="InteliJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsg.m1.lessons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GuessMeFinally" />
+      <item itemvalue="Application.TheCount" />
+      <item itemvalue="Application.ForTimesFor" />
+      <item itemvalue="Application.ForByFor" />
+      <item itemvalue="Application.TraditionalFizzBuzz" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TraditionalFizzBuzz" />
+        <item itemvalue="Application.ForByFor" />
+        <item itemvalue="Application.TheCount" />
+        <item itemvalue="Application.ForTimesFor" />
+        <item itemvalue="Application.GuessMeFinally" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a894888-a84b-4d4e-a6f1-189c257569ea" name="Default Changelist" comment="" />
+      <created>1578939284153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578939284153</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="908" y="294" key="CommitChangelistDialog2" timestamp="1578953354040">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="908" y="294" key="CommitChangelistDialog2/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578953354040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1578962244439">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1578962244439">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1578962244439">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1578962244439">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1578956784029">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1578956784029">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1578956784029">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1578956784029">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1578961828516">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578961828516" />
+  </component>
+</project>

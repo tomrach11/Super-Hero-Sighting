@@ -2,33 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a894888-a84b-4d4e-a6f1-189c257569ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InteliJ.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/DogGenetics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/HealthyHearts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/RockPaperScissors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/assessment/SummativeSums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/exercises/Factorizor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/exercises/InterestCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/exercises/LuckySeven.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/CoinFlipper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/FieldDay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/ForByFor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/ForTimesFor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/GuessMeFinally.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/GuessMeMore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/LazyTeenager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/MaybeItLoveMe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/StayPositive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/TheCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/TraditionalFizzBuzz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/TriviaNight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/YourLifeInMovies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NetBeans/SoftwareGuild/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../download.jpeg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/BarelyControlledChaos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/FruitBasket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/FruitSalad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/HiddenNuts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/SimpleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tsg/m1/lessons/StillPositive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +37,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.TraditionalFizzBuzz">
-    <configuration name="ForByFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.ForByFor" />
+  <component name="RunManager" selected="Application.BarelyControlledChaos">
+    <configuration name="BarelyControlledChaos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.BarelyControlledChaos" />
       <module name="InteliJ" />
       <extension name="coverage">
         <pattern>
@@ -71,8 +53,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ForTimesFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.ForTimesFor" />
+    <configuration name="FruitBasket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.FruitBasket" />
       <module name="InteliJ" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +66,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuessMeFinally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.GuessMeFinally" />
+    <configuration name="FruitSalad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.FruitSalad" />
       <module name="InteliJ" />
       <extension name="coverage">
         <pattern>
@@ -97,8 +79,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TheCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.TheCount" />
+    <configuration name="HiddenNuts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.HiddenNuts" />
       <module name="InteliJ" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TraditionalFizzBuzz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.TraditionalFizzBuzz" />
+    <configuration name="SimpleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsg.m1.lessons.SimpleSort" />
       <module name="InteliJ" />
       <extension name="coverage">
         <pattern>
@@ -124,19 +106,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GuessMeFinally" />
-      <item itemvalue="Application.TheCount" />
-      <item itemvalue="Application.ForTimesFor" />
-      <item itemvalue="Application.ForByFor" />
-      <item itemvalue="Application.TraditionalFizzBuzz" />
+      <item itemvalue="Application.HiddenNuts" />
+      <item itemvalue="Application.FruitBasket" />
+      <item itemvalue="Application.SimpleSort" />
+      <item itemvalue="Application.FruitSalad" />
+      <item itemvalue="Application.BarelyControlledChaos" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TraditionalFizzBuzz" />
-        <item itemvalue="Application.ForByFor" />
-        <item itemvalue="Application.TheCount" />
-        <item itemvalue="Application.ForTimesFor" />
-        <item itemvalue="Application.GuessMeFinally" />
+        <item itemvalue="Application.BarelyControlledChaos" />
+        <item itemvalue="Application.FruitSalad" />
+        <item itemvalue="Application.SimpleSort" />
+        <item itemvalue="Application.FruitBasket" />
+        <item itemvalue="Application.HiddenNuts" />
       </list>
     </recent_temporary>
   </component>
@@ -173,41 +155,81 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="908" y="294" key="CommitChangelistDialog2/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578953354040" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1578962244439">
+    <state width="2517" height="352" key="GridCell.Tab.-1.bottom" timestamp="1579025641893">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1578962244439">
+    <state width="2517" height="352" key="GridCell.Tab.-1.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025641893" />
+    <state width="2517" height="352" key="GridCell.Tab.-1.center" timestamp="1579025641893">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1578962244439">
+    <state width="2517" height="352" key="GridCell.Tab.-1.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025641893" />
+    <state width="2517" height="352" key="GridCell.Tab.-1.left" timestamp="1579025641893">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1578962244439">
+    <state width="2517" height="352" key="GridCell.Tab.-1.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025641893" />
+    <state width="2517" height="352" key="GridCell.Tab.-1.right" timestamp="1579025641893">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578962244439" />
-    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1578956784029">
+    <state width="2517" height="352" key="GridCell.Tab.-1.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025641893" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1579028606632">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
-    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1578956784029">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579028606632" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1579028606632">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
-    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1578956784029">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579028606632" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1579028606632">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
-    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1578956784029">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579028606632" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1579028606632">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578956784029" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1578961828516">
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579028606632" />
+    <state width="2517" height="352" key="GridCell.Tab.1.bottom" timestamp="1579025631991">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578961828516" />
+    <state width="2517" height="352" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025631991" />
+    <state width="2517" height="352" key="GridCell.Tab.1.center" timestamp="1579025631991">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025631991" />
+    <state width="2517" height="352" key="GridCell.Tab.1.left" timestamp="1579025631991">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025631991" />
+    <state width="2517" height="352" key="GridCell.Tab.1.right" timestamp="1579025631991">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025631991" />
+    <state width="2517" height="352" key="GridCell.Tab.2.bottom" timestamp="1579025457964">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.bottom/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025457964" />
+    <state width="2517" height="352" key="GridCell.Tab.2.center" timestamp="1579025457964">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.center/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025457964" />
+    <state width="2517" height="352" key="GridCell.Tab.2.left" timestamp="1579025457964">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.left/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025457964" />
+    <state width="2517" height="352" key="GridCell.Tab.2.right" timestamp="1579025457964">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.right/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025457964" />
+    <state x="781" y="343" key="SettingsEditor" timestamp="1579017407791">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="343" key="SettingsEditor/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579017407791" />
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1579025415636">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="976" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579025415636" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1579021690348">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579021690348" />
   </component>
 </project>

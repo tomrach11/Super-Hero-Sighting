@@ -25,7 +25,7 @@ public class RockPaperScissors {
                 for (int i = 0; i < round; i++) {
                     //set up hands
                     playerHand = inputPlayerHand();
-                    botHand = random.nextInt(4 - 1) + 1;
+                    botHand = random.nextInt(3) + 1;
                     //print player and bot hands
                     System.out.println(">> Your Hand: " + hands[playerHand - 1] + ", Bot Hand: " + hands[botHand - 1]);
 
@@ -44,13 +44,8 @@ public class RockPaperScissors {
                 //show winner
                 showFinalResult(playerWin, botWin);
                 //play again
-                System.out.println("Do you want to play again? [Y][N]");
-                if (!("Y".equals(sc.nextLine()))) {
-                    System.out.println("Thank you for playing !!");
-                    keepGoing = false;
-                } else {
-                    keepGoing = true;
-                }
+                keepGoing = playAgain();
+
             //invalid round
             } else {
                 System.out.println("Error: program is shutting down.");
@@ -66,15 +61,15 @@ public class RockPaperScissors {
             return "botWin";
         }
     }
-    public static void showRoundResult (String result) {
-        if ("playerWin".equals(result)) {
-            System.out.println("You WIN this round!!");
-        } else if ("tie".equals(result)) {
-            System.out.println("We TIE this round!!");
-        } else {
-            System.out.println("You LOST this round!!");
-        }
-    }
+//    public static void showRoundResult (String result) {
+//        if ("playerWin".equals(result)) {
+//            System.out.println("You WIN this round!!");
+//        } else if ("tie".equals(result)) {
+//            System.out.println("We TIE this round!!");
+//        } else {
+//            System.out.println("You LOST this round!!");
+//        }
+//    }
     public static void showFinalResult (int playerWin, int botWin) {
         System.out.println("-----------------------------------------");
         System.out.println("The score: Player Win-" + playerWin + " , Bot Win-" + botWin);
@@ -93,5 +88,15 @@ public class RockPaperScissors {
         System.out.println("Please Choose you hand:");
         System.out.println("Type: 1=>Rock, 2=>Scissors, 3=>Paper");
         return Integer.parseInt(sc.nextLine());
+    }
+    public static boolean playAgain () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Do you want to play again? [Y][N]");
+        if (!("Y".equals(sc.nextLine()))) {
+            System.out.println("Thank you for playing !!");
+            return false;
+        } else {
+            return true;
+        }
     }
 }

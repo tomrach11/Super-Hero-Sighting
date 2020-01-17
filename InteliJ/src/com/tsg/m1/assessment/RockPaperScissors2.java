@@ -28,7 +28,7 @@ public class RockPaperScissors2 {
                     System.out.println("Please Choose you hand:");
                     System.out.println("Type: 1=>Rock, 2=>Scissors, 3=>Paper");
                     playerHand = Integer.parseInt(sc.nextLine());
-                    botHand = random.nextInt(3 - 1) + 1;
+                    botHand = random.nextInt(3) + 1;
                     //show result of round
                     System.out.println(">> Your Hand: " + hands[playerHand - 1] + ", Bot Hand: " + hands[botHand - 1]);
                     if (playerHand == 1 && botHand == 2 || playerHand == 2 && botHand == 3 || playerHand == 3 && botHand == 1) {

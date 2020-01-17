@@ -23,8 +23,9 @@ public class RockPaperScissors {
             if (round >= 1 && round <= 10) {
                 //game start
                 for (int i = 0; i < round; i++) {
+                    //set up hands
                     playerHand = inputPlayerHand();
-                    botHand = random.nextInt(3 - 1) + 1;
+                    botHand = random.nextInt(4 - 1) + 1;
                     //print player and bot hands
                     System.out.println(">> Your Hand: " + hands[playerHand - 1] + ", Bot Hand: " + hands[botHand - 1]);
 
@@ -40,6 +41,7 @@ public class RockPaperScissors {
                         System.out.println("You LOST this round!!");
                     }
                 }
+                //show winner
                 showFinalResult(playerWin, botWin);
                 //play again
                 System.out.println("Do you want to play again? [Y][N]");

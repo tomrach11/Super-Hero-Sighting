@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a894888-a84b-4d4e-a6f1-189c257569ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5a894888-a84b-4d4e-a6f1-189c257569ea" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +156,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="908" y="294" key="CommitChangelistDialog2/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1578953354040" />
+    <state x="1059" y="442" key="FileChooserDialogImpl" timestamp="1580490401164">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1059" y="442" key="FileChooserDialogImpl/0.0.2560.1400/2560.742.1920.1040/-3840.147.1920.1040@0.0.2560.1400" timestamp="1580490401164" />
     <state width="2517" height="352" key="GridCell.Tab.-1.bottom" timestamp="1579025641893">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -245,6 +247,10 @@
       <screen x="2560" y="777" width="1920" height="1040" />
     </state>
     <state x="2560" y="777" width="1874" height="1126" key="dock-window-1/0.0.2560.1400/2560.777.1920.1040/-3840.0.1920.1040@0.0.2560.1400" timestamp="1579275951313" />
+    <state x="662" y="321" key="new project wizard" timestamp="1580490434968">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="662" y="321" key="new project wizard/0.0.2560.1400/2560.742.1920.1040/-3840.147.1920.1040@0.0.2560.1400" timestamp="1580490434968" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1579021690348">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

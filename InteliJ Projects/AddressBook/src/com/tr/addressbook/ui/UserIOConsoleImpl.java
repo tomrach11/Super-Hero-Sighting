@@ -1,4 +1,4 @@
-package com.tr.classroster.ui;
+package com.tr.addressbook.ui;
 
 import java.util.Scanner;
 
@@ -8,6 +8,11 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public void print(String message) {
+        System.out.print(message);
+    }
+
+    @Override
+    public void println(String message) {
         System.out.println(message);
     }
 
@@ -17,13 +22,27 @@ public class UserIOConsoleImpl implements UserIO{
         return Integer.parseInt(sc.nextLine());
     }
 
+//    @Override
+//    public double readDouble(String prompt, double min, double max) throws AddressBookDaoException {
+//        double input = readDouble(prompt);
+//        if (input >= min && input <= max) {
+//            return input;
+//        } else {
+//            return readDouble(prompt, min, max);
+//        }
+//    }
+
     @Override
     public double readDouble(String prompt, double min, double max) {
-        double input = readDouble(prompt);
-        if (input >= min && input <= max) {
-            return input;
-        } else {
-            return readDouble(prompt, min, max);
+        try {
+            double input = readDouble(prompt);
+            if (input >= min && input <= max) {
+                return input;
+            } else {
+                return readDouble(prompt, min, max);
+            }
+        } catch (Exception e) {
+            return 99999;
         }
     }
 
@@ -49,13 +68,27 @@ public class UserIOConsoleImpl implements UserIO{
         return Integer.parseInt(sc.nextLine());
     }
 
+//    @Override
+//    public int readInt(String prompt, int min, int max) throws AddressBookDaoException{
+//        int input = readInt(prompt);
+//        if (input >= min && input <= max) {
+//            return input;
+//        } else {
+//            return readInt(prompt, min, max);
+//        }
+//    }
+
     @Override
     public int readInt(String prompt, int min, int max) {
-        int input = readInt(prompt);
-        if (input >= min && input <= max) {
-            return input;
-        } else {
-            return readInt(prompt, min, max);
+        try {
+            int input = readInt(prompt);
+            if (input >= min && input <= max) {
+                return input;
+            } else {
+                return readInt(prompt, min, max);
+            }
+        } catch (Exception e) {
+            return 123456;
         }
     }
 

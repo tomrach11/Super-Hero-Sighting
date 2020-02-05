@@ -16,4 +16,6 @@ public interface AddressBookDao {
     ArrayList<Profile> allAddress() throws AddressBookDaoException;
 
     Profile findAddress(String lastName) throws AddressBookDaoException;
+
+    void editAddress(String lastName, Address address) throws AddressBookDaoException;
 }

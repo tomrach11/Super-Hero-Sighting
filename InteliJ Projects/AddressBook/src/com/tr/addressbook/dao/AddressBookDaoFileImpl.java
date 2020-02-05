@@ -47,6 +47,15 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
         return addresses.get(lastName);
     }
 
+    @Override
+    public void editAddress(String lastName, Address address) throws AddressBookDaoException {
+        readFile();
+        Profile profile = addresses.get(lastName);
+        profile.setAddress(address);
+        addresses.put(lastName, profile);
+        writeFile();
+    }
+
     public void readFile() throws AddressBookDaoException {
         Scanner scanner;
         try {

@@ -44,6 +44,9 @@ public class AddressBookController {
                         addressList();
                         break;
                     case 6:
+                        editAddress();
+                        break;
+                    case 7:
                         keepGoing = false;
                         exitMessage();
                         break;
@@ -77,6 +80,12 @@ public class AddressBookController {
         view.displayRemoveBanner();
         String lastName = view.getDeleteLastName();
         Profile profile = dao.findAddress(lastName);
+        try {
+            profile.getLastName();
+        } catch (Exception e) {
+            view.displayNotFoundMessage();
+            removeAddress();
+        }
         view.displayAddress(profile);
         if ("Y".equalsIgnoreCase(view.confirmDelete())) {
             dao.removeAddress(lastName);
@@ -89,6 +98,12 @@ public class AddressBookController {
         view.displayFindAddressBanner();
         String lastName = view.getFindLastName();
         Profile profile = dao.findAddress(lastName);
+        try {
+            profile.getLastName();
+        } catch (Exception e) {
+            view.displayNotFoundMessage();
+            findAddress();
+        }
         view.displayAddress(profile);
         pressToContinueLoop();
     }
@@ -97,6 +112,23 @@ public class AddressBookController {
         view.displayListAddressesBanner();
         ArrayList<Profile> addresses = dao.allAddress();
         view.listAddresses(addresses);
+        pressToContinueLoop();
+    }
+
+    private void editAddress() throws AddressBookDaoException {
+        view.displayEditAddressBanner();
+        String lastName = view.getEditLastName();
+        Profile profile = dao.findAddress(lastName);
+        try {
+            profile.getLastName();
+        } catch (Exception e) {
+            view.displayNotFoundMessage();
+            editAddress();
+        }
+        view.displayAddress(profile);
+        Address newAddress = view.getAddress();
+        dao.editAddress(lastName, newAddress);
+        view.displayEditSuccessMessage();
         pressToContinueLoop();
     }
 

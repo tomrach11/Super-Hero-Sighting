@@ -23,8 +23,9 @@ public class AddressBookView {
         io.println("\t\t3. Find Address");
         io.println("\t\t4. List Address Count");
         io.println("\t\t5. List All Address");
-        io.println("\t\t6. Exit");
-        return io.readInt("\tEnter operation [1-6]: ",1 , 6);
+        io.println("\t\t6. Edit Address");
+        io.println("\t\t7. Exit");
+        return io.readInt("\tEnter operation [1-7]: ",1 , 7);
 
     }
 
@@ -90,6 +91,10 @@ public class AddressBookView {
         io.println("");
     }
 
+    public void displayNotFoundMessage() {
+        io.println("\n\tThis last name is not found.\n");
+    }
+
     //count addresses
     public void displayAddressCount(int count) {
         io.println("There are " + count + " addresses in the book.\n");
@@ -116,6 +121,19 @@ public class AddressBookView {
         io.println("List Addresses Menu:");
     }
 
+    //edit address
+    public void displayEditAddressBanner() {
+        io.println("Edit Address Menu: ");
+    }
+
+    public String getEditLastName() {
+        return io.readString("\tPlease enter last name of address to edit: ");
+    }
+
+    public void displayEditSuccessMessage() {
+        io.println("\tAddress Edited.");
+    }
+
     //exit
     public void displayExitMessage() {
         io.println("Program is closing...");
@@ -127,15 +145,13 @@ public class AddressBookView {
         io.println(errorMsg);
     }
 
-
-    public String pressToContinue() {
-        return io.readString("Press 1 to go to Main Menu: ");
-    }
-
     //invalid input
     public void displayInvalidMessage() {
         io.println("\n\t-_-Invalid input. Please enter proper input.\n");
     }
 
+    public String pressToContinue() {
+        return io.readString("Press 1 to go to Main Menu: ");
+    }
 
 }

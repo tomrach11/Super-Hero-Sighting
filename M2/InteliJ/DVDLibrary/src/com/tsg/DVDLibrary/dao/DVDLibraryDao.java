@@ -14,6 +14,8 @@ public interface DVDLibraryDao {
 
     ArrayList<DVD> listDVD();
 
-    DVD findDVD(String title);
+    DVD findByTitle(String title);
+
+    ArrayList<DVD> findByDirector(String director);
 
 }

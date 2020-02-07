@@ -17,7 +17,7 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
 
     @Override
     public void removeDVD(String title) {
-
+        dvds.remove(title);
     }
 
     @Override
@@ -27,11 +27,23 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
 
     @Override
     public ArrayList<DVD> listDVD() {
-        return null;
+        return new ArrayList<DVD>(dvds.values());
     }
 
     @Override
-    public DVD findDVD(String title) {
-        return null;
+    public DVD findByTitle(String title) {
+        return dvds.get(title);
+    }
+
+    @Override
+    public ArrayList<DVD> findByDirector(String director) {
+        ArrayList<DVD> dvdList = new ArrayList<DVD>(dvds.values());
+        ArrayList<DVD> dvdDirectorList = new ArrayList<>();
+        for (DVD dvd : dvdList) {
+            if (dvd.getDirector() == director) {
+                dvdDirectorList.add(dvd);
+            }
+        }
+        return dvdDirectorList;
     }
 }

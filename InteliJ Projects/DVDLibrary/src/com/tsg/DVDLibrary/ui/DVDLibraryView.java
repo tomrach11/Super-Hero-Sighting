@@ -1,8 +1,13 @@
 package com.tsg.DVDLibrary.ui;
 
+import com.tsg.DVDLibrary.dao.DVDLibraryDaoException;
 import com.tsg.DVDLibrary.dto.DVD;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class DVDLibraryView {
 

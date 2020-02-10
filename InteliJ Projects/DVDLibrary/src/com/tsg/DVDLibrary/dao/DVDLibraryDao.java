@@ -6,16 +6,16 @@ import java.util.ArrayList;
 
 public interface DVDLibraryDao {
 
-    void addDVD(DVD dvd);
+    void addDVD(DVD dvd) throws DVDLibraryDaoException;
 
-    void removeDVD(String title);
+    void removeDVD(String title) throws DVDLibraryDaoException;
 
-    void editDVD(String title, DVD dvd);
+    void editDVD(String title, DVD dvd) throws DVDLibraryDaoException;
 
-    ArrayList<DVD> listDVD();
+    ArrayList<DVD> listDVD() throws DVDLibraryDaoException;
 
-    DVD findByTitle(String title);
+    DVD findByTitle(String title) throws DVDLibraryDaoException;
 
-    ArrayList<DVD> findByDirector(String director);
+    ArrayList<DVD> findByDirector(String director) throws DVDLibraryDaoException;
 
 }

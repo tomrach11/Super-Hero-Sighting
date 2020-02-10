@@ -1,6 +1,7 @@
 package com.tsg.DVDLibrary.controller;
 
 import com.tsg.DVDLibrary.dao.DVDLibraryDao;
+import com.tsg.DVDLibrary.dao.DVDLibraryDaoException;
 import com.tsg.DVDLibrary.dto.DVD;
 import com.tsg.DVDLibrary.ui.DVDLibraryView;
 
@@ -20,34 +21,36 @@ public class DVDLibraryController {
 
         boolean keepGoing = true;
         while (keepGoing == true) {
-
-            switch (getMainMenu()) {
-                case "1":
-                    addDVD();
-                    break;
-                case "2":
-                    removeDVD();
-                    break;
-                case "3":
-                    editDVD();
-                    break;
-                case "4":
-                    listDVD();
-                    break;
-                case "5":
-                    searchByTitle();
-                    break;
-                case "6":
-                    searchByDirector();
-                    break;
-                case "7":
-                    keepGoing = false;
-                    break;
-                default:
-                    getValidInputMessage();
-                    break;
+            try {
+                switch (getMainMenu()) {
+                    case "1":
+                        addDVD();
+                        break;
+                    case "2":
+                        removeDVD();
+                        break;
+                    case "3":
+                        editDVD();
+                        break;
+                    case "4":
+                        listDVD();
+                        break;
+                    case "5":
+                        searchByTitle();
+                        break;
+                    case "6":
+                        searchByDirector();
+                        break;
+                    case "7":
+                        keepGoing = false;
+                        break;
+                    default:
+                        getValidInputMessage();
+                        break;
+                }
+            } catch (DVDLibraryDaoException e){
+                
             }
-
         }
         view.exitMessage();
     }
@@ -56,7 +59,7 @@ public class DVDLibraryController {
         return view.mainMenu();
     }
 
-    public void addDVD() {
+    public void addDVD() throws DVDLibraryDaoException {
         view.displayAddBanner();
         String addMore = "Y";
         while (checkYes(addMore)) {
@@ -67,7 +70,7 @@ public class DVDLibraryController {
         }
     }
 
-    public void removeDVD() {
+    public void removeDVD() throws DVDLibraryDaoException {
         view.displayRemoveDVDBanner();
         String removeMore = "Y";
         while (checkYes(removeMore)) {
@@ -84,7 +87,7 @@ public class DVDLibraryController {
         }
     }
 
-    public void editDVD() {
+    public void editDVD() throws DVDLibraryDaoException {
         view.displayEditBanner();
         String editMore = "Y";
         while (checkYes(editMore)) {
@@ -104,7 +107,7 @@ public class DVDLibraryController {
         }
     }
 
-    public void searchByTitle() {
+    public void searchByTitle() throws DVDLibraryDaoException {
         view.displaySearchByTitle();
         String viewMore = "Y";
         while (checkYes(viewMore)) {
@@ -115,7 +118,7 @@ public class DVDLibraryController {
         }
     }
 
-    public void searchByDirector() {
+    public void searchByDirector() throws DVDLibraryDaoException {
         view.displaySearchByDirectorBanner();
         String findMore = "Y";
         while (checkYes(findMore)) {
@@ -132,7 +135,7 @@ public class DVDLibraryController {
         }
     }
 
-    public void listDVD() {
+    public void listDVD() throws DVDLibraryDaoException {
         view.displayListDVDBanner();
         //get and view list of dvd
         ArrayList<DVD> dvdList = dao.listDVD();
@@ -141,7 +144,7 @@ public class DVDLibraryController {
         viewMoreInfo();
     }
 
-    public void viewMoreInfo() {
+    public void viewMoreInfo() throws DVDLibraryDaoException {
         String viewMore = view.getMoreInfo();
         while (checkYes(viewMore)) {
             String title = view.getTitle();

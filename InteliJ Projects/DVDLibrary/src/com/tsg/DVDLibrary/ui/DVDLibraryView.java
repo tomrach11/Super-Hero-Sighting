@@ -13,24 +13,29 @@ public class DVDLibraryView {
     }
 
     public String mainMenu() {
-        io.println("Main Menu");
+        io.println("\nMain Menu:");
         io.println("\tPlease select the operation you wish to perform: ");
         io.println("\t\t1. Add DVD");
         io.println("\t\t2. Remove DVD");
         io.println("\t\t3. Edit DVD");
         io.println("\t\t4. View List of DVD");
-        io.println("\t\t5. Search a DVD");
-        io.println("\t\t6. Exit");
-        return io.readString("\tPlease enter [1 - 6]: ");
+        io.println("\t\t5. Search DVD by Title");
+        io.println("\t\t6. Search DVD by Director");
+        io.println("\t\t7. Exit");
+        return io.readString("\tPlease enter [1 - 7]: ");
     }
 
     public void invalidInput() {
-        io.println("\t_-Invalid Input. Please enter proper input.");
+        io.println("\n\t_-Invalid Input. Please enter proper input.");
     }
 
-    //add DVD
+    public void exitMessage() {
+        io.println("\nProgram is shutting down ....");
+    }
+
+//add DVD
     public void displayAddBanner() {
-        io.println("Add DVD Menu: ");
+        io.println("\nAdd DVD Menu: ");
     }
 
     public DVD getDVD() {
@@ -50,12 +55,12 @@ public class DVDLibraryView {
     }
 
     public String getAddMore() {
-        return io.readString("\tWould you like to add more DVD? [Y/N]: ");
+        return io.readString("\n\tWould you like to add more DVD? [Y/N]: ");
     }
 
-    //remove dvd
+//remove dvd
     public void displayRemoveDVDBanner() {
-        io.println("Remove DVD Menu: ");
+        io.println("\nRemove DVD Menu: ");
     }
 
     public String getConfirm() {
@@ -67,12 +72,45 @@ public class DVDLibraryView {
     }
 
     public String getMoreRemove() {
-        return io.readString("\tWould you like to remove more DVD? [Y/N]: ");
+        return io.readString("\n\tWould you like to remove more DVD? [Y/N]: ");
     }
 
-    //list dvd
+//edit dvd
+    public void displayEditBanner() {
+        io.println("\nEdit DVD Menu: ");
+    }
+
+    public String getEditConfirm() {
+        return io.readString("\tConfirm edit? [Y/N]: ");
+    }
+
+    public String getDVDConfirm() {
+        return io.readString("\tEdit This DVD? [Y/N]: ");
+    }
+
+    public DVD editDVD(String title) {
+        DVD newDVD = new DVD();
+        newDVD.setTitle(title);
+        io.println("\t\tEditing DVD Title: " + newDVD.getTitle());
+        newDVD.setDirector(io.readString("\t\tPlease enter new Director: "));
+        newDVD.setStudio(io.readString("\t\tPlease enter new Studio: "));
+        newDVD.setReleaseDate(io.readString("\t\tPlease enter new Release Date: "));
+        newDVD.setMpaaRating(io.readString("\t\tPlease enter new MPAA Rating: "));
+        newDVD.setNote(io.readString("\t\tPlease enter Note: "));
+        return newDVD;
+    }
+
+    public String getEditMore() {
+        return io.readString("\n\tWould you like to edit more DVD? [Y/N]: ");
+    }
+
+    public void displayEditSuccessMessage() {
+        io.println("\tDVD edited.");
+    }
+
+//list dvd
     public void displayListDVDBanner() {
-        io.println("\tList of DVDs Menu: ");
+        io.println("\nList of DVDs Menu: ");
     }
 
     public void displayListDVD(ArrayList<DVD> dvds) {
@@ -82,14 +120,14 @@ public class DVDLibraryView {
     }
 
     public String getMoreInfo() {
-        return io.readString("\tWould you like to get information for a particular DVD? [Y/N]: ");
+        return io.readString("\n\tWould you like to get more information for a particular DVD? [Y/N]: ");
     }
 
     public String getTitle() {
         return io.readString("\tPlease enter DVD Title: ");
     }
 
-    public void displayDVDInfo(DVD dvd) {
+    public boolean displayDVDInfo(DVD dvd) {
         if (dvd != null) {
             io.println("\t\tTitle: " + dvd.getTitle());
             io.println("\t\tDirector: " + dvd.getDirector());
@@ -97,15 +135,21 @@ public class DVDLibraryView {
             io.println("\t\tRelease Date: " + dvd.getReleaseDate());
             io.println("\t\tMPAA Rating: " + dvd.getMpaaRating());
             io.println("\t\tNote: " + dvd.getNote());
+            return true;
         }
         else {
-            io.println("\tDVD not found.");
+            displayNotFoundMessage();
+            return false;
         }
     }
+//search by title
+    public void displaySearchByTitle() {
+        io.println("\nSearch DVD by Title Menu: ");
+    }
 
-    //find dvd
-    public void displayFindDVDBanner() {
-        io.println("Search DVD by Director Menu: ");
+//search by director
+    public void displaySearchByDirectorBanner() {
+        io.println("\nSearch DVD by Director Menu: ");
     }
 
 
@@ -113,21 +157,13 @@ public class DVDLibraryView {
         return io.readString("\tPlease enter DVD's Director: ");
     }
 
-    public void displayMultipleDVDInfo(ArrayList<DVD> dvdList) {
-        System.out.println("test");
-        for (DVD dvd : dvdList) {
-                System.out.println("test2");
-            if (dvd != null) {
-                System.out.println("test3");
-                io.println("\t\tTitle: " + dvd.getTitle());
-                io.println("\t\tDirector: " + dvd.getDirector());
-                io.println("\t\tStudio: " + dvd.getStudio());
-                io.println("\t\tRelease Date: " + dvd.getReleaseDate());
-                io.println("\t\tMPAA Rating: " + dvd.getMpaaRating());
-                io.println("\t\tNote: " + dvd.getNote());
-            } else {
-                io.println("\tDVD not found.");
-            }
-        }
+
+    public String getSearchMore() {
+        return io.readString("\n\tWould you like to search for more director? [Y/N]: ");
     }
+
+    public void displayNotFoundMessage() {
+        io.println("\tDVD not found.");
+    }
+
 }

@@ -38,6 +38,11 @@ public class DVDLibraryView {
         io.println("\nProgram is shutting down ....");
     }
 
+    public  void errorMessage(String error) {
+        io.println("=== ERROR ====");
+        io.println(error);
+    }
+
 //add DVD
     public void displayAddBanner() {
         io.println("\nAdd DVD Menu: ");

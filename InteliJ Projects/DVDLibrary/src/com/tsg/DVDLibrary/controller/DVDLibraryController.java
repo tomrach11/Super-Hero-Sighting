@@ -49,7 +49,7 @@ public class DVDLibraryController {
                         break;
                 }
             } catch (DVDLibraryDaoException e){
-                
+                view.errorMessage(e.getMessage());
             }
         }
         view.exitMessage();
@@ -139,9 +139,14 @@ public class DVDLibraryController {
         view.displayListDVDBanner();
         //get and view list of dvd
         ArrayList<DVD> dvdList = dao.listDVD();
-        view.displayListDVD(dvdList);
-        //view more info of dvd
-        viewMoreInfo();
+        if (dvdList.size() > 0) {
+            view.displayListDVD(dvdList);
+            //view more info of dvd
+            viewMoreInfo();
+        }
+        else {
+            view.displayNotFoundMessage();
+        }
     }
 
     public void viewMoreInfo() throws DVDLibraryDaoException {

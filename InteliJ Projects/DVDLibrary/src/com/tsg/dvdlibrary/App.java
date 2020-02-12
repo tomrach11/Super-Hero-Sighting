@@ -1,11 +1,11 @@
-package com.tsg.DVDLibrary;
+package com.tsg.dvdlibrary;
 
-import com.tsg.DVDLibrary.controller.DVDLibraryController;
-import com.tsg.DVDLibrary.dao.DVDLibraryDao;
-import com.tsg.DVDLibrary.dao.DVDLibraryDaoFileImpl;
-import com.tsg.DVDLibrary.ui.DVDLibraryView;
-import com.tsg.DVDLibrary.ui.UserIO;
-import com.tsg.DVDLibrary.ui.UserIOConsoleImpl;
+import com.tsg.dvdlibrary.controller.DVDLibraryController;
+import com.tsg.dvdlibrary.dao.DVDLibraryDao;
+import com.tsg.dvdlibrary.dao.DVDLibraryDaoFileImpl;
+import com.tsg.dvdlibrary.ui.DVDLibraryView;
+import com.tsg.dvdlibrary.ui.UserIO;
+import com.tsg.dvdlibrary.ui.UserIOConsoleImpl;
 
 public class App {
 

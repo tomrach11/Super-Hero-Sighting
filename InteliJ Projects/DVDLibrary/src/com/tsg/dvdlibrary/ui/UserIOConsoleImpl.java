@@ -1,4 +1,4 @@
-package com.tsg.DVDLibrary.ui;
+package com.tsg.dvdlibrary.ui;
 
 import java.util.Scanner;
 

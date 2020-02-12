@@ -1,9 +1,9 @@
-package com.tsg.DVDLibrary.controller;
+package com.tsg.dvdlibrary.controller;
 
-import com.tsg.DVDLibrary.dao.DVDLibraryDao;
-import com.tsg.DVDLibrary.dao.DVDLibraryDaoException;
-import com.tsg.DVDLibrary.dto.DVD;
-import com.tsg.DVDLibrary.ui.DVDLibraryView;
+import com.tsg.dvdlibrary.dao.DVDLibraryDao;
+import com.tsg.dvdlibrary.dao.DVDLibraryDaoException;
+import com.tsg.dvdlibrary.dto.DVD;
+import com.tsg.dvdlibrary.ui.DVDLibraryView;
 
 import java.util.ArrayList;
 
@@ -160,6 +160,9 @@ public class DVDLibraryController {
     }
 
     public boolean checkYes(String yesNo) {
+        while (!yesNo.equalsIgnoreCase("Y") && !yesNo.equalsIgnoreCase("N")) {
+            yesNo = view.yesNo();
+        }
         if (yesNo.equalsIgnoreCase("Y")) return true;
         return false;
     }

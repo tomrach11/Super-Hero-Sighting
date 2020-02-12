@@ -1,4 +1,4 @@
-package com.tsg.DVDLibrary.dto;
+package com.tsg.dvdlibrary.dto;
 
 public class DVD {
     private String title;

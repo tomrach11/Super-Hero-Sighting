@@ -1,6 +1,6 @@
-package com.tsg.DVDLibrary.dao;
+package com.tsg.dvdlibrary.dao;
 
-import com.tsg.DVDLibrary.dto.DVD;
+import com.tsg.dvdlibrary.dto.DVD;
 
 import java.io.*;
 import java.util.*;

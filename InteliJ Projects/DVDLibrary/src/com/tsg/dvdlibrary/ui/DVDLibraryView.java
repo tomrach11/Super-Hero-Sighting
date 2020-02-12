@@ -1,13 +1,8 @@
-package com.tsg.DVDLibrary.ui;
+package com.tsg.dvdlibrary.ui;
 
-import com.tsg.DVDLibrary.dao.DVDLibraryDaoException;
-import com.tsg.DVDLibrary.dto.DVD;
+import com.tsg.dvdlibrary.dto.DVD;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class DVDLibraryView {
 
@@ -174,6 +169,11 @@ public class DVDLibraryView {
 
     public void displayNotFoundMessage() {
         io.println("\tDVD not found.");
+    }
+
+    //yesNo
+    public String yesNo() {
+        return io.readString("\tPlease enter [Y/N]: ");
     }
 
 }

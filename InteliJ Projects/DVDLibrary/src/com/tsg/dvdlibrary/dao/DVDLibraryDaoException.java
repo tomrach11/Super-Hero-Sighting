@@ -1,4 +1,4 @@
-package com.tsg.DVDLibrary.dao;
+package com.tsg.dvdlibrary.dao;
 
 public class DVDLibraryDaoException extends Exception {
 

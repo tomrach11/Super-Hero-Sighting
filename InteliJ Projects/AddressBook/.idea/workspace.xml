@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e16e236b-3527-4ed5-845d-9893395c23ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/dvds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/dvds.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/controller/DVDLibraryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/controller/DVDLibraryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dao/DVDLibraryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dao/DVDLibraryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dao/DVDLibraryDaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dao/DVDLibraryDaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dao/DVDLibraryDaoFileImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dao/DVDLibraryDaoFileImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dto/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/dto/DVD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/ui/DVDLibraryView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/ui/DVDLibraryView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/ui/UserIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/ui/UserIO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/ui/UserIOConsoleImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/out/production/DVDLibrary/com/tsg/DVDLibrary/ui/UserIOConsoleImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/controller/DVDLibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/controller/DVDLibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/dao/DVDLibraryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/dao/DVDLibraryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/dao/DVDLibraryDaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/dao/DVDLibraryDaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/dao/DVDLibraryDaoFileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/dao/DVDLibraryDaoFileImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/dto/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/dto/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/ui/DVDLibraryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/ui/DVDLibraryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/ui/UserIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/ui/UserIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/DVDLibrary/ui/UserIOConsoleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DVDLibrary/src/com/tsg/dvdlibrary/ui/UserIOConsoleImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1XOd2DuRLxCKNdYrivPAghsrrmM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DVDLibrary" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tr.addressbook.App" />
+      <module name="AddressBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tr.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e16e236b-3527-4ed5-845d-9893395c23ed" name="Default Changelist" comment="" />
+      <created>1580920865872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580920865872</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1580926102378">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1580926102378" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1581361660722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581361660722" />
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1581527545130">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581527545130" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1581527545130">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581527545130" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1581527545126">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581527545126" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1581527545130">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581527545130" />
+    <state x="277" y="0" width="981" height="824" key="SettingsEditor" timestamp="1581361598341">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" width="981" height="824" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581361598341" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581355545094">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581355545094" />
+    <state x="209" y="34" key="new project wizard" timestamp="1580933714917">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="34" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1580933714917" />
+  </component>
+</project>

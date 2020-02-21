@@ -1,8 +1,11 @@
 package com.tsg.dvdlibrary.controller;
 
 import com.tsg.dvdlibrary.dao.DVDLibraryDao;
-import com.tsg.dvdlibrary.dao.DVDLibraryDaoException;
+import com.tsg.dvdlibrary.dao.DVDLibraryDaoPersistenceException;
+import com.tsg.dvdlibrary.dao.DVDLibraryDataValidationException;
+import com.tsg.dvdlibrary.dao.DVDLibraryDuplicateTitleException;
 import com.tsg.dvdlibrary.dto.DVD;
+import com.tsg.dvdlibrary.service.DVDLibraryServiceLayer;
 import com.tsg.dvdlibrary.ui.DVDLibraryView;
 
 import java.util.ArrayList;
@@ -10,11 +13,11 @@ import java.util.ArrayList;
 public class DVDLibraryController {
 
     DVDLibraryView view;
-    DVDLibraryDao dao;
+    DVDLibraryServiceLayer service;
 
-    public DVDLibraryController(DVDLibraryView view, DVDLibraryDao dao) {
+    public DVDLibraryController(DVDLibraryView view, DVDLibraryServiceLayer service) {
         this.view = view;
-        this.dao = dao;
+        this.service = service;
     }
 
     public void run() {
@@ -48,7 +51,7 @@ public class DVDLibraryController {
                         getValidInputMessage();
                         break;
                 }
-            } catch (DVDLibraryDaoException e){
+            } catch (DVDLibraryDaoPersistenceException e){
                 view.errorMessage(e.getMessage());
             }
         }
@@ -59,27 +62,34 @@ public class DVDLibraryController {
         return view.mainMenu();
     }
 
-    public void addDVD() throws DVDLibraryDaoException {
+    public void addDVD() throws DVDLibraryDaoPersistenceException {
         view.displayAddBanner();
         String addMore = "Y";
         while (checkYes(addMore)) {
             DVD dvd = view.getDVD();
-            dao.addDVD(dvd);
-            view.displayAddSuccess();
+            boolean hasError = false;
+            do {
+                try {
+                    service.createDVD(dvd);
+                    view.displayAddSuccess();
+                } catch (DVDLibraryDuplicateTitleException | DVDLibraryDataValidationException e) {
+                    view.errorMessage(e.getMessage());
+                }
+            } while (hasError);
             addMore = view.getAddMore();
         }
     }
 
-    public void removeDVD() throws DVDLibraryDaoException {
+    public void removeDVD() throws DVDLibraryDaoPersistenceException {
         view.displayRemoveDVDBanner();
         String removeMore = "Y";
         while (checkYes(removeMore)) {
             String title = view.getTitle();
-            DVD dvd = dao.findByTitle(title);
+            DVD dvd = service.getDVD(title);
             boolean found = view.displayDVDInfo(dvd);
             if (found) {
                 if (checkYes(view.getConfirm())) {
-                    dao.removeDVD(title);
+                    service.removeDVD(title);
                     view.displayRemoveSuccess();
                 }
             }
@@ -87,43 +97,50 @@ public class DVDLibraryController {
         }
     }
 
-    public void editDVD() throws DVDLibraryDaoException {
+    public void editDVD() throws DVDLibraryDaoPersistenceException {
         view.displayEditBanner();
         String editMore = "Y";
         while (checkYes(editMore)) {
             String title = view.getTitle();
-            DVD dvd = dao.findByTitle(title);
+            DVD dvd = service.getDVD(title);
             boolean found = view.displayDVDInfo(dvd);
             if (found) {
                 if (checkYes(view.getDVDConfirm())) {
-                    DVD newDVD = view.editDVD(title);
-                    if (checkYes(view.getEditConfirm())) {
-                        dao.editDVD(title, newDVD);
-                        view.displayEditSuccessMessage();
-                    }
+                    boolean hasError = false;
+                    do {
+                        try {
+                            DVD newDVD = view.editDVD(title);
+                            if (checkYes(view.getEditConfirm())) {
+                                service.editDVD(title, newDVD);
+                                view.displayEditSuccessMessage();
+                            }
+                        } catch (DVDLibraryDataValidationException e) {
+                            view.errorMessage(e.getMessage());
+                        }
+                    } while (hasError);
                 }
             }
             editMore = view.getEditMore();
         }
     }
 
-    public void searchByTitle() throws DVDLibraryDaoException {
+    public void searchByTitle() throws DVDLibraryDaoPersistenceException {
         view.displaySearchByTitle();
         String viewMore = "Y";
         while (checkYes(viewMore)) {
             String title = view.getTitle();
-            DVD dvd = dao.findByTitle(title);
+            DVD dvd = service.getDVD(title);
             view.displayDVDInfo(dvd);
             viewMore = view.getMoreInfo();
         }
     }
 
-    public void searchByDirector() throws DVDLibraryDaoException {
+    public void searchByDirector() throws DVDLibraryDaoPersistenceException {
         view.displaySearchByDirectorBanner();
         String findMore = "Y";
         while (checkYes(findMore)) {
             String director = view.getDirector();
-            ArrayList<DVD> dvdList = dao.findByDirector(director);
+            ArrayList<DVD> dvdList = service.getDVDByDirector(director);
             if (dvdList.size() > 0) {
                 view.displayListDVD(dvdList);
                 viewMoreInfo();
@@ -135,10 +152,10 @@ public class DVDLibraryController {
         }
     }
 
-    public void listDVD() throws DVDLibraryDaoException {
+    public void listDVD() throws DVDLibraryDaoPersistenceException {
         view.displayListDVDBanner();
         //get and view list of dvd
-        ArrayList<DVD> dvdList = dao.listDVD();
+        ArrayList<DVD> dvdList = service.allDVD();
         if (dvdList.size() > 0) {
             view.displayListDVD(dvdList);
             //view more info of dvd
@@ -149,11 +166,11 @@ public class DVDLibraryController {
         }
     }
 
-    public void viewMoreInfo() throws DVDLibraryDaoException {
+    public void viewMoreInfo() throws DVDLibraryDaoPersistenceException {
         String viewMore = view.getMoreInfo();
         while (checkYes(viewMore)) {
             String title = view.getTitle();
-            DVD dvd = dao.findByTitle(title);
+            DVD dvd = service.getDVD(title);
             view.displayDVDInfo(dvd);
             viewMore = view.getMoreInfo();
         }

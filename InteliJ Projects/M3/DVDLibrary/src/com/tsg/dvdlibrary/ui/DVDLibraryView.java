@@ -157,11 +157,9 @@ public class DVDLibraryView {
         io.println("\nSearch DVD by Director Menu: ");
     }
 
-
     public String getDirector() {
         return io.readString("\tPlease enter DVD's Director: ");
     }
-
 
     public String getSearchMore() {
         return io.readString("\n\tWould you like to search for more director? [Y/N]: ");
@@ -171,7 +169,7 @@ public class DVDLibraryView {
         io.println("\tDVD not found.");
     }
 
-    //yesNo
+//yesNo
     public String yesNo() {
         return io.readString("\tPlease enter [Y/N]: ");
     }

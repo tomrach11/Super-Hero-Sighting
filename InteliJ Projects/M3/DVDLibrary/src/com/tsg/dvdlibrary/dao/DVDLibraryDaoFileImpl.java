@@ -13,7 +13,7 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
     Map<String, DVD> dvds = new HashMap<>();
 
     @Override
-    public DVD addDVD(DVD dvd) throws DVDLibraryDaoException {
+    public DVD addDVD(DVD dvd) throws DVDLibraryDaoPersistenceException {
         readFile();
         DVD addedDVD = dvds.put(dvd.getTitle(), dvd);
         writeFile();
@@ -21,7 +21,7 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
     }
 
     @Override
-    public DVD removeDVD(String title) throws DVDLibraryDaoException {
+    public DVD removeDVD(String title) throws DVDLibraryDaoPersistenceException {
         readFile();
         DVD removedDVD = dvds.remove(title);
         writeFile();
@@ -29,7 +29,7 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
     }
 
     @Override
-    public DVD editDVD(String title, DVD dvd) throws DVDLibraryDaoException {
+    public DVD editDVD(String title, DVD dvd) throws DVDLibraryDaoPersistenceException {
         readFile();
         DVD editedDVD = dvds.put(title, dvd);
         writeFile();
@@ -37,19 +37,19 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
     }
 
     @Override
-    public ArrayList<DVD> listDVD() throws DVDLibraryDaoException {
+    public ArrayList<DVD> listDVD() throws DVDLibraryDaoPersistenceException {
         readFile();
         return new ArrayList<DVD>(dvds.values());
     }
 
     @Override
-    public DVD findByTitle(String title) throws DVDLibraryDaoException {
+    public DVD findByTitle(String title) throws DVDLibraryDaoPersistenceException {
         readFile();
         return dvds.get(title);
     }
 
     @Override
-    public ArrayList<DVD> findByDirector(String director) throws DVDLibraryDaoException {
+    public ArrayList<DVD> findByDirector(String director) throws DVDLibraryDaoPersistenceException {
         readFile();
         ArrayList<DVD> dvdList = listDVD();
         ArrayList<DVD> dvdDirectorList = new ArrayList<>();
@@ -62,12 +62,12 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
     }
 
     //read file
-    public void readFile() throws DVDLibraryDaoException {
+    public void readFile() throws DVDLibraryDaoPersistenceException {
         Scanner scanner;
         try {
             scanner = new Scanner(new BufferedReader(new FileReader(DVDS_FILE)));
         } catch (FileNotFoundException e) {
-            throw new DVDLibraryDaoException("-_ Could not load DVDs data into memory.", e);
+            throw new DVDLibraryDaoPersistenceException("-_ Could not load DVDs data into memory.", e);
         }
 
         while (scanner.hasNextLine()) {
@@ -90,12 +90,12 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
         return currentDVD;
     }
 
-    public void writeFile() throws DVDLibraryDaoException {
+    public void writeFile() throws DVDLibraryDaoPersistenceException {
         PrintWriter out;
         try {
             out = new PrintWriter(new FileWriter(DVDS_FILE));
         } catch (IOException e) {
-            throw new DVDLibraryDaoException("_- Could not save data to file.");
+            throw new DVDLibraryDaoPersistenceException("_- Could not save data to file.");
         }
 
         List<DVD> dvdList = listDVD();

@@ -1,11 +1,10 @@
 package com.tsg.dvdlibrary.dto;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class DVD {
     private String title;
-    private LocalDate ReleaseDate;
+    private LocalDate releaseDate;
     private String mpaaRating;
     private String director;
     private String studio;
@@ -20,12 +19,16 @@ public class DVD {
     }
 
     public String getReleaseDate() {
-        String ReleaseDateString = ReleaseDate.toString();
-        return ReleaseDateString;
+        String releaseDateString = releaseDate.toString();
+        return releaseDateString;
     }
 
     public void setReleaseDate(String releaseDate) {
-        ReleaseDate = LocalDate.parse(releaseDate);
+        this.releaseDate = LocalDate.parse(releaseDate);
+    }
+
+    public LocalDate getReleaseDateAsLocalDate() {
+        return releaseDate;
     }
 
     public String getMpaaRating() {

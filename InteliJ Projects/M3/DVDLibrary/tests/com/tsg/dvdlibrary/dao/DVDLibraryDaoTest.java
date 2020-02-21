@@ -14,7 +14,7 @@ public class DVDLibraryDaoTest {
     DVDLibraryDao dao = new DVDLibraryDaoFileImpl();
 
     @BeforeEach
-    public void setUp() throws DVDLibraryDaoException {
+    public void setUp() throws DVDLibraryDaoPersistenceException {
         ArrayList<DVD> DVDList = dao.listDVD();
         for (DVD dvd : DVDList) {
             dao.removeDVD(dvd.getTitle());
@@ -26,7 +26,7 @@ public class DVDLibraryDaoTest {
     }
 
     @Test
-    public void testGetAddDVD() throws DVDLibraryDaoException {
+    public void testGetAddDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
         dvd.setReleaseDate("01/01/2020");
@@ -41,7 +41,7 @@ public class DVDLibraryDaoTest {
     }
 
     @Test
-    public void removeDVD() throws DVDLibraryDaoException {
+    public void removeDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
         dvd.setReleaseDate("01/01/2020");
@@ -70,7 +70,7 @@ public class DVDLibraryDaoTest {
     }
 
     @Test
-    public void editDVD() throws DVDLibraryDaoException {
+    public void editDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
         dvd.setReleaseDate("01/01/2020");
@@ -95,7 +95,7 @@ public class DVDLibraryDaoTest {
     }
 
     @Test
-    public void listDVD() throws DVDLibraryDaoException {
+    public void listDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
         dvd.setReleaseDate("01/01/2020");
@@ -118,7 +118,7 @@ public class DVDLibraryDaoTest {
     }
 
     @Test
-    public void findByDirector() throws DVDLibraryDaoException {
+    public void findByDirector() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
         dvd.setReleaseDate("01/01/2020");

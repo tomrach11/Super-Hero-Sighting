@@ -1,5 +1,7 @@
 package com.tsg.dvdlibrary.ui;
 
+import java.time.LocalDate;
+
 public interface UserIO {
 
     void print(String message);
@@ -23,4 +25,6 @@ public interface UserIO {
     long readLong(String prompt, long min, long max);
 
     String readString(String prompt);
+
+    LocalDate readLocalDate(String prompt);
 }

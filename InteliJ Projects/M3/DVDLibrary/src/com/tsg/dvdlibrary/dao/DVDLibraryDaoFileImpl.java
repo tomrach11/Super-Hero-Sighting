@@ -3,7 +3,12 @@ package com.tsg.dvdlibrary.dao;
 import com.tsg.dvdlibrary.dto.DVD;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.function.ToIntFunction;
+import java.util.stream.Collectors;
 
 public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
 
@@ -59,6 +64,78 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
             }
         }
         return dvdDirectorList;
+    }
+
+    @Override
+    public List<DVD> findFromYear(String year) throws DVDLibraryDaoPersistenceException {
+        readFile();
+        LocalDate yearDate = LocalDate.parse(year + "-01-01");
+        Predicate<DVD> fromYear = (DVD dvd) -> {
+            return (dvd.getReleaseDateAsLocalDate().getYear() == yearDate.getYear());
+        };
+        return listDVD().stream().filter(fromYear).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<DVD> findByRating(String rating) throws DVDLibraryDaoPersistenceException {
+        readFile();
+        Predicate<DVD> matchRating = (DVD dvd) -> {
+            return (dvd.getMpaaRating().equalsIgnoreCase(rating));
+        };
+        return listDVD().stream().filter(matchRating).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<DVD> findByStudio(String studio) throws DVDLibraryDaoPersistenceException {
+        readFile();
+        Predicate<DVD> matchStudio = (DVD dvd) -> {
+            return (dvd.getStudio().equalsIgnoreCase(studio));
+        };
+        return listDVD().stream().filter(matchStudio).collect(Collectors.toList());
+    }
+
+    @Override
+    public double findAverageAge() throws DVDLibraryDaoPersistenceException {
+        readFile();
+        int totalYear = 0;
+        ToIntFunction<DVD> getYear = (DVD dvd) -> {
+            Period p = dvd.getReleaseDateAsLocalDate().until(LocalDate.now());
+            return p.getYears();
+        };
+        return (listDVD().stream().mapToInt(getYear).average().getAsDouble());
+    }
+
+    @Override
+    public List<DVD> findNewestDVD() throws DVDLibraryDaoPersistenceException {
+        readFile();
+        LocalDate newestDate = LocalDate.parse("1111-11-11");
+        //List<DVD> newestDVDList = new ArrayList<>();
+        //use for loop to find newest date
+        for(DVD dvd : listDVD()) {
+            if (dvd.getReleaseDateAsLocalDate().compareTo(newestDate) > 0 || dvd.getReleaseDateAsLocalDate().compareTo(newestDate) == 0) {
+                newestDate = dvd.getReleaseDateAsLocalDate();
+                //newestDVDList.add(dvd);
+            }
+        }
+
+        //use lamda and steam to create list of dvd that match with newestDate
+        LocalDate NEWEST = newestDate;
+        Predicate<DVD> newestDVD = (DVD dvd) -> dvd.getReleaseDateAsLocalDate().compareTo(NEWEST) == 0;
+        return listDVD().stream().filter(newestDVD).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<DVD> findOldestDVD() throws DVDLibraryDaoPersistenceException {
+        readFile();
+        LocalDate oldestDate = LocalDate.now();
+        for(DVD dvd : listDVD()) {
+            if(dvd.getReleaseDateAsLocalDate().compareTo(oldestDate) <= 0) {
+                oldestDate = dvd.getReleaseDateAsLocalDate();
+            }
+        }
+        LocalDate OLDEST = oldestDate;
+        Predicate<DVD> oldestDVD = (DVD dvd) -> dvd.getReleaseDateAsLocalDate().compareTo(OLDEST) == 0;
+        return listDVD().stream().filter(oldestDVD).collect(Collectors.toList());
     }
 
     //read file

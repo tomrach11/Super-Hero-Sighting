@@ -1,8 +1,8 @@
 package com.tsg.dvdlibrary.dao;
 
 import com.tsg.dvdlibrary.dto.DVD;
-import com.tsg.dvdlibrary.service.DVDLibraryServiceLayer;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,5 +67,35 @@ public class DVDLibraryDaoStubImpl implements DVDLibraryDao {
     @Override
     public ArrayList<DVD> findByDirector(String director) throws DVDLibraryDaoPersistenceException {
         return DVDList;
+    }
+
+    @Override
+    public List<DVD> findFromYear(String year) throws DVDLibraryDaoPersistenceException {
+        return null;
+    }
+
+    @Override
+    public List<DVD> findByRating(String rating) throws DVDLibraryDaoPersistenceException {
+        return null;
+    }
+
+    @Override
+    public List<DVD> findByStudio(String studio) throws DVDLibraryDaoPersistenceException {
+        return null;
+    }
+
+    @Override
+    public double findAverageAge() throws DVDLibraryDaoPersistenceException {
+        return 0;
+    }
+
+    @Override
+    public List<DVD> findNewestDVD() throws DVDLibraryDaoPersistenceException {
+        return null;
+    }
+
+    @Override
+    public List<DVD> findOldestDVD() throws DVDLibraryDaoPersistenceException {
+        return null;
     }
 }

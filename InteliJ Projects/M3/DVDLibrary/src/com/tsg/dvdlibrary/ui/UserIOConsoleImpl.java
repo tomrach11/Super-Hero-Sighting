@@ -1,5 +1,6 @@
 package com.tsg.dvdlibrary.ui;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class UserIOConsoleImpl implements UserIO{
@@ -112,6 +113,12 @@ public class UserIOConsoleImpl implements UserIO{
     public String readString(String prompt) {
         print(prompt);
         return sc.nextLine();
+    }
+
+    @Override
+    public LocalDate readLocalDate(String prompt) {
+        print(prompt);
+        return LocalDate.parse(sc.nextLine());
     }
 
 }

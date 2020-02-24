@@ -3,6 +3,7 @@ package com.tsg.dvdlibrary.ui;
 import com.tsg.dvdlibrary.dto.DVD;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DVDLibraryView {
 
@@ -21,7 +22,13 @@ public class DVDLibraryView {
         io.println("\t\t4. View List of DVD");
         io.println("\t\t5. Search DVD by Title");
         io.println("\t\t6. Search DVD by Director");
-        io.println("\t\t7. Exit");
+        io.println("\t\t7. Search DVD From Year");
+        io.println("\t\t8. Search DVD by MPAA Rating");
+        io.println("\t\t9. Search DVD by Studio");
+        io.println("\t\t10. Find Average DVD age");
+        io.println("\t\t11. Search Newest DVD");
+        io.println("\t\t12. Search Oldest DVD");
+        io.println("\t\t13. Exit");
         return io.readString("\tPlease enter [1 - 7]: ");
     }
 
@@ -162,16 +169,72 @@ public class DVDLibraryView {
     }
 
     public String getSearchMore() {
-        return io.readString("\n\tWould you like to search for more director? [Y/N]: ");
+        return io.readString("\n\tWould you like to search for more on this Menu? [Y/N]: ");
     }
 
     public void displayNotFoundMessage() {
         io.println("\tDVD not found.");
     }
 
+//search from year
+    public void displaySearchFromYearBanner() {
+        io.println("\nSearch from Year Menu: ");
+    }
+
+    public String getYear() {
+        return io.readString("\tPlease Enter Year: ");
+    }
+
+    public void displayListDVD(List<DVD> dvds) {
+        for (DVD dvd : dvds) {
+            io.println("\t- " + dvd.getTitle() + " by " + dvd.getDirector());
+        }
+    }
+
+//search by rating
+    public void displaySearchByRatingBanner() {
+        io.println("\nSearch by Title Menu: ");
+    }
+
+    public String getRating() {
+        return io.readString("\tPlease Enter MPAA Rating: ");
+    }
+
+//search by studio
+    public void displaySearchByStudioBanner() {
+        io.println("\nSearch by Studio Menu: ");
+    }
+
+    public String getStudio() {
+        return io.readString("\n Please Enter Studio Nmae: ");
+    }
+
+//find average age
+    public void displayFindAverageAgeBanner() {
+        io.println("\nFind Average Age Menu: ");
+    }
+
+    public void displayAverageAge(double averageAge) {
+        io.println("\tAverage DVD Age is " + averageAge + " years old.");
+    }
+
+//search newest dvd
+    public void displaySearchNewestDVDBanner() {
+        io.println("\nSearch Newest DVD Menu: ");
+    }
+
+//search oldest dvd
+    public void displaySearchOldestDVDBanner() {
+        io.println("\nSearch Newest DVD Menu: ");
+    }
+
 //yesNo
     public String yesNo() {
         return io.readString("\tPlease enter [Y/N]: ");
+    }
+
+    public void pressToContinue() {
+        io.readString("\n\tPlease press Enter to continue.");
     }
 
 }

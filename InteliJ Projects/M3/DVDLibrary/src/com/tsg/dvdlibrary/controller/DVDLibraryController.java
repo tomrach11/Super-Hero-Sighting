@@ -1,6 +1,5 @@
 package com.tsg.dvdlibrary.controller;
 
-import com.tsg.dvdlibrary.dao.DVDLibraryDao;
 import com.tsg.dvdlibrary.dao.DVDLibraryDaoPersistenceException;
 import com.tsg.dvdlibrary.dao.DVDLibraryDataValidationException;
 import com.tsg.dvdlibrary.dao.DVDLibraryDuplicateTitleException;
@@ -9,6 +8,7 @@ import com.tsg.dvdlibrary.service.DVDLibraryServiceLayer;
 import com.tsg.dvdlibrary.ui.DVDLibraryView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DVDLibraryController {
 
@@ -45,6 +45,24 @@ public class DVDLibraryController {
                         searchByDirector();
                         break;
                     case "7":
+                        searchFromYear();
+                        break;
+                    case "8":
+                        searchByRatting();
+                        break;
+                    case "9":
+                        searchByStudio();
+                        break;
+                    case "10":
+                        findAverageAge();
+                        break;
+                    case "11":
+                        searchNewest();
+                        break;
+                    case "12":
+                        searchOldest();
+                        break;
+                    case "13":
                         keepGoing = false;
                         break;
                     default:
@@ -173,6 +191,89 @@ public class DVDLibraryController {
             DVD dvd = service.getDVD(title);
             view.displayDVDInfo(dvd);
             viewMore = view.getMoreInfo();
+        }
+    }
+
+    public void searchFromYear() throws DVDLibraryDaoPersistenceException {
+        view.displaySearchFromYearBanner();
+        String findMore = "Y";
+        while (checkYes(findMore)) {
+            String year = view.getYear();
+            List<DVD> dvdList = service.findFromYear(year);
+            if (dvdList.size() > 0) {
+                view.displayListDVD(dvdList);
+                //view more info of dvd
+                viewMoreInfo();
+            } else {
+                view.displayNotFoundMessage();
+            }
+            findMore = view.getSearchMore();
+        }
+    }
+
+    public void searchByRatting() throws DVDLibraryDaoPersistenceException {
+        view.displaySearchByRatingBanner();
+        String findMore = "Y";
+        while (checkYes(findMore)) {
+            String rating = view.getRating();
+            List<DVD> dvdList = service.findByRating(rating);
+            if (dvdList.size() > 0) {
+                view.displayListDVD(dvdList);
+                //view more info of dvd
+                viewMoreInfo();
+            } else {
+                view.displayNotFoundMessage();
+            }
+            findMore = view.getSearchMore();
+        }
+    }
+
+    public void searchByStudio() throws DVDLibraryDaoPersistenceException {
+        view.displaySearchByStudioBanner();
+        String findMore = "Y";
+        while (checkYes(findMore)) {
+            String studio = view.getStudio();
+            List<DVD> dvdList = service.findByStudio(studio);
+            if (dvdList.size() > 0) {
+                view.displayListDVD(dvdList);
+                //view more info of dvd
+                viewMoreInfo();
+            } else {
+                view.displayNotFoundMessage();
+            }
+            findMore = view.getSearchMore();
+        }
+
+    }
+
+    public void findAverageAge() throws DVDLibraryDaoPersistenceException {
+        view.displayFindAverageAgeBanner();
+        double averageAge = service.findAverageAge();
+        view.displayAverageAge(averageAge);
+        view.pressToContinue();
+    }
+
+    public void searchNewest() throws DVDLibraryDaoPersistenceException {
+        view.displaySearchNewestDVDBanner();
+        List<DVD> dvdList = service.findNewestDVD();
+        if (dvdList.size() > 0) {
+            view.displayListDVD(dvdList);
+            //view more info of dvd
+            viewMoreInfo();
+        } else {
+            view.displayNotFoundMessage();
+        }
+    }
+
+    public void searchOldest() throws DVDLibraryDaoPersistenceException {
+        view.displaySearchOldestDVDBanner();
+        List<DVD> dvdList = service.findOldestDVD();
+        if (dvdList.size() > 0) {
+            view.displayListDVD(dvdList);
+            //view more info of dvd
+            viewMoreInfo();
+        } else {
+            view.displayNotFoundMessage();
         }
     }
 

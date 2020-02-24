@@ -6,7 +6,9 @@ import com.tsg.dvdlibrary.dao.DVDLibraryDataValidationException;
 import com.tsg.dvdlibrary.dao.DVDLibraryDuplicateTitleException;
 import com.tsg.dvdlibrary.dto.DVD;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DVDLibraryServiceLayerImpl implements DVDLibraryServiceLayer {
 
@@ -52,6 +54,36 @@ public class DVDLibraryServiceLayerImpl implements DVDLibraryServiceLayer {
     @Override
     public ArrayList<DVD> getDVDByDirector(String Director) throws DVDLibraryDaoPersistenceException {
         return dao.findByDirector(Director);
+    }
+
+    @Override
+    public List<DVD> findFromYear(String year) throws DVDLibraryDaoPersistenceException {
+        return dao.findFromYear(year);
+    }
+
+    @Override
+    public List<DVD> findByRating(String rating) throws DVDLibraryDaoPersistenceException {
+        return dao.findByRating(rating);
+    }
+
+    @Override
+    public List<DVD> findByStudio(String studio) throws DVDLibraryDaoPersistenceException {
+        return dao.findByStudio(studio);
+    }
+
+    @Override
+    public double findAverageAge() throws DVDLibraryDaoPersistenceException {
+        return dao.findAverageAge();
+    }
+
+    @Override
+    public List<DVD> findNewestDVD() throws DVDLibraryDaoPersistenceException {
+        return dao.findNewestDVD();
+    }
+
+    @Override
+    public List<DVD> findOldestDVD() throws DVDLibraryDaoPersistenceException {
+        return dao.findOldestDVD();
     }
 
     private void validateData(DVD dvd) throws DVDLibraryDataValidationException {

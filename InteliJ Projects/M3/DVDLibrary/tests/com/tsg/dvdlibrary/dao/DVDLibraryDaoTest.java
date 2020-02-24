@@ -5,7 +5,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,7 +31,7 @@ public class DVDLibraryDaoTest {
     public void testGetAddDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
-        dvd.setReleaseDate("01/01/2020");
+        dvd.setReleaseDate("2020-01-01");
         dvd.setDirector("Director1");
         dvd.setMpaaRating("PG-13");
         dvd.setStudio("Studio1");
@@ -44,7 +46,7 @@ public class DVDLibraryDaoTest {
     public void removeDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
-        dvd.setReleaseDate("01/01/2020");
+        dvd.setReleaseDate("2020-01-01");
         dvd.setDirector("Director1");
         dvd.setMpaaRating("PG-13");
         dvd.setStudio("Studio1");
@@ -53,7 +55,7 @@ public class DVDLibraryDaoTest {
 
         DVD dvd2 = new DVD();
         dvd2.setTitle("Title2");
-        dvd2.setReleaseDate("01/01/2020");
+        dvd2.setReleaseDate("2020-01-01");
         dvd2.setDirector("Director2");
         dvd2.setMpaaRating("PG-13");
         dvd2.setStudio("Studio2");
@@ -73,7 +75,7 @@ public class DVDLibraryDaoTest {
     public void editDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
-        dvd.setReleaseDate("01/01/2020");
+        dvd.setReleaseDate("2020-01-01");
         dvd.setDirector("Director1");
         dvd.setMpaaRating("PG-13");
         dvd.setStudio("Studio1");
@@ -82,7 +84,7 @@ public class DVDLibraryDaoTest {
 
         DVD dvd2 = new DVD();
         dvd2.setTitle("Title1");
-        dvd2.setReleaseDate("01/01/2020");
+        dvd2.setReleaseDate("2020-01-01");
         dvd2.setDirector("Director2");
         dvd2.setMpaaRating("PG-13");
         dvd2.setStudio("Studio2");
@@ -98,7 +100,7 @@ public class DVDLibraryDaoTest {
     public void listDVD() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
-        dvd.setReleaseDate("01/01/2020");
+        dvd.setReleaseDate("2020-01-01");
         dvd.setDirector("Director1");
         dvd.setMpaaRating("PG-13");
         dvd.setStudio("Studio1");
@@ -107,7 +109,7 @@ public class DVDLibraryDaoTest {
 
         DVD dvd2 = new DVD();
         dvd2.setTitle("Title2");
-        dvd2.setReleaseDate("01/01/2020");
+        dvd2.setReleaseDate("2020-01-01");
         dvd2.setDirector("Director2");
         dvd2.setMpaaRating("PG-13");
         dvd2.setStudio("Studio2");
@@ -121,7 +123,7 @@ public class DVDLibraryDaoTest {
     public void findByDirector() throws DVDLibraryDaoPersistenceException {
         DVD dvd = new DVD();
         dvd.setTitle("Title1");
-        dvd.setReleaseDate("01/01/2020");
+        dvd.setReleaseDate("2020-01-01");
         dvd.setDirector("Director1");
         dvd.setMpaaRating("PG-13");
         dvd.setStudio("Studio1");
@@ -130,7 +132,7 @@ public class DVDLibraryDaoTest {
 
         DVD dvd2 = new DVD();
         dvd2.setTitle("Title2");
-        dvd2.setReleaseDate("01/01/2020");
+        dvd2.setReleaseDate("2020-01-01");
         dvd2.setDirector("Director2");
         dvd2.setMpaaRating("PG-13");
         dvd2.setStudio("Studio2");
@@ -139,7 +141,7 @@ public class DVDLibraryDaoTest {
 
         DVD dvd3 = new DVD();
         dvd3.setTitle("Title3");
-        dvd3.setReleaseDate("01/01/2020");
+        dvd3.setReleaseDate("2020-01-01");
         dvd3.setDirector("Director2");
         dvd3.setMpaaRating("PG-13");
         dvd3.setStudio("Studio3");
@@ -150,5 +152,109 @@ public class DVDLibraryDaoTest {
         assertEquals(2, DVDList.size());
         ArrayList<DVD> DVDList1 = dao.findByDirector(dvd.getDirector());
         assertEquals(dvd, DVDList1.get(0));
+    }
+
+    @Test
+    public void findFromYear() throws DVDLibraryDaoPersistenceException {
+        DVD dvd = new DVD();
+        dvd.setTitle("Title1");
+        dvd.setReleaseDate("2020-02-01");
+        dvd.setDirector("Director1");
+        dvd.setMpaaRating("PG-13");
+        dvd.setStudio("Studio1");
+        dvd.setNote("Note1");
+        dao.addDVD(dvd);
+
+        DVD dvd2 = new DVD();
+        dvd2.setTitle("Title2");
+        dvd2.setReleaseDate("2019-02-01");
+        dvd2.setDirector("Director2");
+        dvd2.setMpaaRating("PG-13");
+        dvd2.setStudio("Studio2");
+        dvd2.setNote("Note2");
+        dao.addDVD(dvd2);
+
+        DVD dvd3 = new DVD();
+        dvd3.setTitle("Title3");
+        dvd3.setReleaseDate("2019-01-01");
+        dvd3.setDirector("Director2");
+        dvd3.setMpaaRating("PG-13");
+        dvd3.setStudio("Studio3");
+        dvd3.setNote("Note3");
+        dao.addDVD(dvd3);
+
+        String year = "2020";
+
+        List<DVD> fromDao = dao.findFromYear(year);
+
+        assertEquals(2, fromDao.size());
+
+    }
+
+    @Test
+    public void findAverageAge() throws DVDLibraryDaoPersistenceException {
+        DVD dvd = new DVD();
+        dvd.setTitle("Title1");
+        dvd.setReleaseDate("2019-02-01");
+        dvd.setDirector("Director1");
+        dvd.setMpaaRating("PG-13");
+        dvd.setStudio("Studio1");
+        dvd.setNote("Note1");
+        dao.addDVD(dvd);
+
+        DVD dvd2 = new DVD();
+        dvd2.setTitle("Title2");
+        dvd2.setReleaseDate("2019-02-01");
+        dvd2.setDirector("Director2");
+        dvd2.setMpaaRating("PG-13");
+        dvd2.setStudio("Studio2");
+        dvd2.setNote("Note2");
+        dao.addDVD(dvd2);
+
+        DVD dvd3 = new DVD();
+        dvd3.setTitle("Title3");
+        dvd3.setReleaseDate("2019-01-01");
+        dvd3.setDirector("Director2");
+        dvd3.setMpaaRating("PG-13");
+        dvd3.setStudio("Studio3");
+        dvd3.setNote("Note3");
+        dao.addDVD(dvd3);
+
+        double averageAge = dao.findAverageAge();
+        assertEquals(1, averageAge);
+    }
+
+    @Test
+    public void findNewestDVD() throws DVDLibraryDaoPersistenceException {
+        DVD dvd = new DVD();
+        dvd.setTitle("Title1");
+        dvd.setReleaseDate("2020-02-01");
+        dvd.setDirector("Director1");
+        dvd.setMpaaRating("PG-13");
+        dvd.setStudio("Studio1");
+        dvd.setNote("Note1");
+        dao.addDVD(dvd);
+
+        DVD dvd2 = new DVD();
+        dvd2.setTitle("Title2");
+        dvd2.setReleaseDate("2019-02-01");
+        dvd2.setDirector("Director2");
+        dvd2.setMpaaRating("PG-13");
+        dvd2.setStudio("Studio2");
+        dvd2.setNote("Note2");
+        dao.addDVD(dvd2);
+
+        DVD dvd3 = new DVD();
+        dvd3.setTitle("Title3");
+        dvd3.setReleaseDate("2019-01-01");
+        dvd3.setDirector("Director2");
+        dvd3.setMpaaRating("PG-13");
+        dvd3.setStudio("Studio3");
+        dvd3.setNote("Note3");
+        dao.addDVD(dvd3);
+
+        List<DVD> newestDVDList = dao.findNewestDVD();
+        assertTrue(newestDVDList.contains(dvd));
+
     }
 }

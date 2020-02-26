@@ -1,0 +1,8 @@
+A1::Snickers::1.25::10
+A2::Twix::1.25::1
+A3::KitKat::1.50::5
+A4::M&M::1.50::4
+B1::Doritos::2.00::2
+B2::Lays::1.50::3
+B3::Cheetos::1.50::1
+B4::Fritos::1.50::0

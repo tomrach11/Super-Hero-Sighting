@@ -1,6 +1,7 @@
 package com.tr.vendingmachine.dto;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Item {
     private String itemCode;
@@ -38,5 +39,21 @@ public class Item {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Item)) return false;
+        Item item = (Item) o;
+        return getStock() == item.getStock() &&
+                getItemCode().equals(item.getItemCode()) &&
+                getItemName().equals(item.getItemName()) &&
+                getPrice().equals(item.getPrice());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getItemCode(), getItemName(), getPrice(), getStock());
     }
 }

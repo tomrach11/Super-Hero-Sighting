@@ -1,9 +1,6 @@
 package com.tr.vendingmachine.controller;
 
-import com.tr.vendingmachine.dao.VendingMachineInsufficientFundException;
-import com.tr.vendingmachine.dao.VendingMachineItemNotFoundException;
-import com.tr.vendingmachine.dao.VendingMachineItemOutOfStockException;
-import com.tr.vendingmachine.dao.VendingMachinePersistenceException;
+import com.tr.vendingmachine.dao.*;
 import com.tr.vendingmachine.dto.Change;
 import com.tr.vendingmachine.dto.Item;
 import com.tr.vendingmachine.service.VendingMachineServiceLayer;
@@ -28,13 +25,18 @@ public class VendingMachineController {
             boolean keepGoing = true;
             while(keepGoing) {
                 insertMoney();
-                selectItem();
-                keepGoing = vendItem();
+                boolean toVend = selectItem();
+                if(toVend) {
+                    keepGoing = vendItem();
+                }
+                else {
+                    keepGoing = false;
+                }
             }
+            shutDown();
         } catch (VendingMachinePersistenceException e) {
             new VendingMachinePersistenceException(e.getMessage());
         }
-
     }
 
     private void displayItems() throws VendingMachinePersistenceException {
@@ -50,14 +52,16 @@ public class VendingMachineController {
         service.insertMoney(money);
     }
 
-    private void selectItem() throws VendingMachinePersistenceException {
+    private boolean selectItem() throws VendingMachinePersistenceException {
         view.displaySelectItemBanner();
+        boolean toVend = true;
         boolean hasError = true;
         while (hasError) {
             try {
                 String selectedItem = view.getSelectItem();
                 if(selectedItem.equalsIgnoreCase("Q")){
                     returnChange();
+                    toVend = false;
                 }
                 else {
                     service.selectItem(selectedItem);
@@ -68,13 +72,15 @@ public class VendingMachineController {
                 hasError = true;
             }
         }
+        return toVend;
     }
 
     private boolean vendItem() throws VendingMachinePersistenceException{
         try {
             Change change = service.vendItem();
+            view.displayDroppingItem();
+            view.displayChange(change);
             view.displayVendSuccess();
-            //display change;
             return false;
         } catch(VendingMachineItemOutOfStockException | VendingMachineInsufficientFundException e) {
             view.displayErrorMassage(e.getMessage());
@@ -84,12 +90,12 @@ public class VendingMachineController {
 
     private void returnChange() {
         Change change = service.returnChange();
-        //view.displayReturnChange(change);
+        view.displayChange(change);
         view.displayCancelMessage();
     }
 
-
-
-
+    private void shutDown() {
+        view.displayProgramClosing();
+    }
 
 }

@@ -13,7 +13,6 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
     private static final String DELIMITER = "::";
 
     Map<String, Item> items = new HashMap<>();
-    Change change = new Change();
 
     @Override
     public Item readItem(String itemCode) throws VendingMachinePersistenceException {

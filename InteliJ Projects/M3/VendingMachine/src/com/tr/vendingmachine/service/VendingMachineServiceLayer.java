@@ -21,7 +21,3 @@ public interface VendingMachineServiceLayer {
 
     Change returnChange();
 }
-/// inventory.txt
-//ID::Name::Cost::Qty
-//        A1::Snickers::1.25::10
-//        A2::Twix::1.25::1

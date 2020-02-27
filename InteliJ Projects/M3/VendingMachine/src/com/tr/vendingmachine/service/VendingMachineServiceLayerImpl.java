@@ -5,6 +5,7 @@ import com.tr.vendingmachine.dto.Change;
 import com.tr.vendingmachine.dto.Item;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -12,12 +13,14 @@ import java.util.stream.Collectors;
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
 
     VendingMachineDao dao;
+    VendingMachineAuditDao audit;
 
     BigDecimal balance = new BigDecimal("0.00");
-    String selectItem;
+    public String selectItem;
 
-    public VendingMachineServiceLayerImpl(VendingMachineDao dao) {
+    public VendingMachineServiceLayerImpl(VendingMachineDao dao, VendingMachineAuditDao audit) {
         this.dao = dao;
+        this.audit = audit;
     }
 
     @Override
@@ -56,14 +59,32 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
             throw new VendingMachineInsufficientFundException("Insufficient fund. Please insert more money.");
         }
         else {
-            balance.subtract(item.getPrice());
-            //do change
+            balance = balance.subtract(item.getPrice());
+            item.setStock(item.getStock() - 1);
+            dao.updateItem(item.getItemCode(), item);
+            change = returnChange();
+            audit.writeAuditEntry(selectItem);
         }
         return change;
     }
 
     @Override
     public Change returnChange() {
-        return null;
+        BigDecimal money = balance;
+        Change change = new Change();
+
+        change.setQuarterAmount(money.divide(change.getQUARTER(), 0, RoundingMode.DOWN).intValue());
+        money = money.remainder(change.getQUARTER());
+
+        change.setDimeAmount(money.divide(change.getDIME(), 0, RoundingMode.DOWN).intValue());
+        money = money.remainder(change.getDIME());
+
+        change.setNickelAmount(money.divide(change.getNICKEL(), 0, RoundingMode.DOWN).intValue());
+        money = money.remainder(change.getNICKEL());
+
+        change.setPennyAmount(money.divide(change.getPENNY(), 0, RoundingMode.DOWN).intValue());
+        money = money.remainder(change.getPENNY());
+
+        return change;
     }
 }

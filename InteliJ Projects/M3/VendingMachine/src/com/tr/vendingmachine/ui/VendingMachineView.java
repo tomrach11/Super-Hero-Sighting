@@ -37,7 +37,7 @@ public class VendingMachineView {
     }
 
     public void displayVendSuccess() {
-        io.println("\nPlease take your Item and change.");
+        io.println("Please take your Item and change.");
     }
 
     public void displayErrorMassage(String message) {
@@ -54,5 +54,21 @@ public class VendingMachineView {
 
     public void displayCancelMessage() {
         io.println("Order Cancel. Please take your change.");
+    }
+
+    public void displayDroppingItem() {
+        io.println("\n===== DROPPING YOUR ITEM ======");
+    }
+
+    public void displayChange(Change change) {
+        io.println("Change:");
+        io.println("\tQuarter: " + change.getQuarterAmount() + " coins.");
+        io.println("\tDime: " + change.getDimeAmount() + " coins.");
+        io.println("\tNickel: " + change.getNickelAmount() + " coins.");
+        io.println("\tPenny: " + change.getPennyAmount() + " coins.");
+    }
+
+    public void displayProgramClosing() {
+        io.println("\nProgram is shutting down ...");
     }
 }

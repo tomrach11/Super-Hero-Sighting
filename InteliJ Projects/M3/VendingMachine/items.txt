@@ -1,4 +1,4 @@
-A1::Snickers::1.25::5
+A1::Snickers::1.25::4
 B2::Lays::1.50::3
 A2::Twix::1.25::1
 B3::Cheetos::1.50::1

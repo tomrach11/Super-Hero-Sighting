@@ -77,4 +77,34 @@ public class Change {
     public void setPennyAmount(int pennyAmount) {
         this.pennyAmount = pennyAmount;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Change)) return false;
+
+        Change change = (Change) o;
+
+        if (getQuarterAmount() != change.getQuarterAmount()) return false;
+        if (getDimeAmount() != change.getDimeAmount()) return false;
+        if (getNickelAmount() != change.getNickelAmount()) return false;
+        if (getPennyAmount() != change.getPennyAmount()) return false;
+        if (!getQUARTER().equals(change.getQUARTER())) return false;
+        if (!getDIME().equals(change.getDIME())) return false;
+        if (!getNICKEL().equals(change.getNICKEL())) return false;
+        return getPENNY().equals(change.getPENNY());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getQUARTER().hashCode();
+        result = 31 * result + getDIME().hashCode();
+        result = 31 * result + getNICKEL().hashCode();
+        result = 31 * result + getPENNY().hashCode();
+        result = 31 * result + getQuarterAmount();
+        result = 31 * result + getDimeAmount();
+        result = 31 * result + getNickelAmount();
+        result = 31 * result + getPennyAmount();
+        return result;
+    }
 }

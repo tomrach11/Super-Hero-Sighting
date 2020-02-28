@@ -124,6 +124,10 @@ public class UserIOFileImpl implements UserIO{
     @Override
     public BigDecimal readBigDecimal(String prompt) {
         print(prompt);
-        return new BigDecimal(sc.nextLine());
+        try {
+            return new BigDecimal(sc.nextLine());
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 }

@@ -46,10 +46,20 @@ public class VendingMachineController {
 
     private void insertMoney() {
         view.displayInsertMoneyBanner();
-        BigDecimal money = new BigDecimal("0.00");
-        view.displayBalance(service.insertMoney(money));
-        money = view.insertMoney();
-        service.insertMoney(money);
+        boolean hasError = true;
+        while(hasError) {
+            try {
+                BigDecimal money = new BigDecimal("0.00");
+                view.displayBalance(service.insertMoney(money));
+                money = view.insertMoney();
+                service.insertMoney(money);
+                hasError = false;
+
+            } catch (VendingMachineInValidInputException e) {
+                view.displayErrorMassage(e.getMessage());
+                hasError = true;
+            }
+        }
     }
 
     private boolean selectItem() throws VendingMachinePersistenceException {

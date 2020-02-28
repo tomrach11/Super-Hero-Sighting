@@ -1,9 +1,6 @@
 package com.tr.vendingmachine.service;
 
-import com.tr.vendingmachine.dao.VendingMachineInsufficientFundException;
-import com.tr.vendingmachine.dao.VendingMachineItemNotFoundException;
-import com.tr.vendingmachine.dao.VendingMachineItemOutOfStockException;
-import com.tr.vendingmachine.dao.VendingMachinePersistenceException;
+import com.tr.vendingmachine.dao.*;
 import com.tr.vendingmachine.dto.Change;
 import com.tr.vendingmachine.dto.Item;
 
@@ -13,7 +10,7 @@ import java.util.List;
 public interface VendingMachineServiceLayer {
     List<Item> getItems() throws VendingMachinePersistenceException;
 
-    BigDecimal insertMoney(BigDecimal money);
+    BigDecimal insertMoney(BigDecimal money) throws VendingMachineInValidInputException;
 
     void selectItem(String itemCode) throws VendingMachineItemNotFoundException, VendingMachinePersistenceException, VendingMachineItemOutOfStockException, VendingMachineInsufficientFundException;
 

@@ -1,5 +1,6 @@
 package com.tr.vendingmachine.ui;
 
+import com.tr.vendingmachine.dao.VendingMachineInValidInputException;
 import com.tr.vendingmachine.dto.Change;
 import com.tr.vendingmachine.dto.Item;
 
@@ -28,7 +29,7 @@ public class VendingMachineView {
         io.println("\tCurrent Balance: $" + balance);
     }
 
-    public BigDecimal insertMoney() {
+    public BigDecimal insertMoney() throws VendingMachineInValidInputException {
         return io.readBigDecimal("\tPlease Insert Money: ");
     }
 

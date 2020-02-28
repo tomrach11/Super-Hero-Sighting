@@ -29,25 +29,7 @@ class VendingMachineDaoFileImplTest {
     @BeforeEach
     void setUp() throws VendingMachinePersistenceException {
         file = new File("test.txt");
-//        file.delete();
-        PrintWriter out;
-
-        try {
-            out = new PrintWriter(new FileWriter(TEST_FILE));
-        } catch (IOException e) {
-            throw new VendingMachinePersistenceException("-_Could not save item data to file.");
-        }
-
-        String item1 = "A1::Item1::1.00::1";
-        String item2 = "A2::Item2::1.25::10";
-        String item3 = "A3::Item3::2.00::0";
-        out.println(item1);
-        out.flush();
-        out.println(item2);
-        out.flush();
-        out.println(item3);
-        out.flush();
-        out.close();
+        writeFile();
 
     }
 
@@ -125,5 +107,26 @@ class VendingMachineDaoFileImplTest {
         String MapToString = dao.marshallItem(item);
 
         assertEquals(itemText, MapToString);
+    }
+
+    private void writeFile() throws VendingMachinePersistenceException {
+        PrintWriter out;
+
+        try {
+            out = new PrintWriter(new FileWriter(TEST_FILE));
+        } catch (IOException e) {
+            throw new VendingMachinePersistenceException("-_Could not save item data to file.");
+        }
+
+        String item1 = "A1::Item1::1.00::1";
+        String item2 = "A2::Item2::1.25::10";
+        String item3 = "A3::Item3::2.00::0";
+        out.println(item1);
+        out.flush();
+        out.println(item2);
+        out.flush();
+        out.println(item3);
+        out.flush();
+        out.close();
     }
 }

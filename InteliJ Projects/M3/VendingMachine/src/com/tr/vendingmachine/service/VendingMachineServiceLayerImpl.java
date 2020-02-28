@@ -33,8 +33,12 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public BigDecimal insertMoney(BigDecimal money) {
-        balance = balance.add(money);
+    public BigDecimal insertMoney(BigDecimal money) throws VendingMachineInValidInputException {
+        if(money != null) {
+            balance = balance.add(money);
+        } else {
+            throw new VendingMachineInValidInputException("Error: Invalid Input.");
+        }
         return balance;
     }
 

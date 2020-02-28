@@ -16,12 +16,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VendingMachineDaoTest {
 
-    VendingMachineDao dao = new VendingMachineDaoFileImpl();
+    VendingMachineDao dao = new VendingMachineDaoFileImpl("test.txt");
+
+    VendingMachineDaoTest() throws VendingMachinePersistenceException {
+    }
 
     @BeforeEach
     void setUp() {
-//        File file = new File("items.txt");
-        //file.delete();
+        File file = new File("test.txt");
+        file.delete();
     }
 
     @AfterEach
@@ -44,6 +47,7 @@ class VendingMachineDaoTest {
 
     @Test
     void readAll() {
+
     }
 
     @Test

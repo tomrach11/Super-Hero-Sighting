@@ -9,26 +9,28 @@ import java.util.*;
 
 public class VendingMachineDaoFileImpl implements VendingMachineDao {
 
-    private static final String ITEMS_FILE = "items.txt";
+    private String ITEMS_FILE;
     private static final String DELIMITER = "::";
 
     Map<String, Item> items = new HashMap<>();
 
+    public VendingMachineDaoFileImpl(String ITEMS_FILE) throws VendingMachinePersistenceException {
+        this.ITEMS_FILE = ITEMS_FILE;
+        this.readFile();
+    }
+
     @Override
     public Item readItem(String itemCode) throws VendingMachinePersistenceException {
-        readFile();
         return items.get(itemCode.toUpperCase());
     }
 
     @Override
     public List<Item> readAll() throws VendingMachinePersistenceException {
-        readFile();
         return new ArrayList<Item>(items.values()) ;
     }
 
     @Override
     public Item updateItem(String itemCode, Item item) throws VendingMachinePersistenceException {
-        readFile();
         Item updatedItem = items.put(itemCode, item);
         writeFile();
         return updatedItem;

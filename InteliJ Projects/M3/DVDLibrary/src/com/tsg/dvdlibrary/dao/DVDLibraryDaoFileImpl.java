@@ -121,6 +121,7 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao {
         //use lamda and steam to create list of dvd that match with newestDate
         LocalDate NEWEST = newestDate;
         Predicate<DVD> newestDVD = (DVD dvd) -> dvd.getReleaseDateAsLocalDate().compareTo(NEWEST) == 0;
+
         return listDVD().stream().filter(newestDVD).collect(Collectors.toList());
     }
 

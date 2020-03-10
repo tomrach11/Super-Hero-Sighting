@@ -7,6 +7,7 @@ import com.tr.vendingmachine.service.VendingMachineServiceLayerImpl;
 import com.tr.vendingmachine.ui.UserIO;
 import com.tr.vendingmachine.ui.UserIOFileImpl;
 import com.tr.vendingmachine.ui.VendingMachineView;
+import com.tr.vendingmachine.dao.VendingMachineAuditDaoImpl;
 
 public class App {
 
@@ -20,5 +21,6 @@ public class App {
         VendingMachineServiceLayer service = new VendingMachineServiceLayerImpl(dao, audit);
         VendingMachineController controller = new VendingMachineController(view, service);
         controller.run();
+
     }
 }

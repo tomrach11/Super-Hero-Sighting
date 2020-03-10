@@ -54,7 +54,6 @@ public class VendingMachineController {
                 money = view.insertMoney();
                 service.insertMoney(money);
                 hasError = false;
-
             } catch (VendingMachineInValidInputException e) {
                 view.displayErrorMassage(e.getMessage());
                 hasError = true;

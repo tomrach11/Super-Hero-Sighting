@@ -138,7 +138,7 @@ class VendingMachineServiceLayerImplTest {
     }
 
     @Test
-    void testReturnChangeOneQuater() throws Exception{
+    void testReturnChangeOneQuarter() throws Exception{
         this.setUp();
         Change change = new Change();
         change.setQuarterAmount(1);

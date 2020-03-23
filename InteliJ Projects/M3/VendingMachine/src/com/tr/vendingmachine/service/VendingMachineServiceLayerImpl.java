@@ -15,7 +15,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     VendingMachineDao dao;
     VendingMachineAuditDao audit;
 
-    BigDecimal balance = new BigDecimal("0.00");
+    public BigDecimal balance = new BigDecimal("0.00");
     public String selectItem;
 
     public VendingMachineServiceLayerImpl(VendingMachineDao dao, VendingMachineAuditDao audit) {

@@ -36,7 +36,7 @@ class VendingMachineServiceLayerImplTest {
 
     @AfterEach
     void tearDown() {
-        file.delete();
+        //file.delete();
     }
 
     @Test
@@ -48,8 +48,11 @@ class VendingMachineServiceLayerImplTest {
     }
 
     @Test
-    void insertMoney() {
+    void insertMoney() throws VendingMachinePersistenceException, VendingMachineInValidInputException {
+        this.setUp();
+        service.insertMoney(new BigDecimal("1.00"));
 
+        this.tearDown();
     }
 
     @Test

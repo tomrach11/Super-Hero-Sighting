@@ -1,4 +1,0 @@
-Title1::2020-02-01::Director1::Studio1::PG-13::Note1
-Title3::2019-01-01::Director2::Studio3::PG-13::Note3
-Title2::2019-11-01::Director2::Studio2::PG-13::Note2
-Title4::2020-11-01::Director2::Studio2::PG-13::Note2
